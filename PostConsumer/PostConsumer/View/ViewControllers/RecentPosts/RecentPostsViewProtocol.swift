@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RecentPostsViewProtocol: AnyObject
+protocol RecentPostsViewProtocol: ViewControllerProtocol
 {
     func showPosts(_ posts: [PostModel])
 

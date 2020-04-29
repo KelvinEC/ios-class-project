@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2G-43-Ozi">
-                        <rect key="frame" x="52" y="62" width="310" height="142"/>
+                        <rect key="frame" x="36" y="62" width="342" height="142"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -52,11 +52,11 @@
                     <constraint firstItem="Za1-Of-fGi" firstAttribute="leading" secondItem="CVj-dP-wUx" secondAttribute="leading" constant="32" id="5HI-jv-ijo"/>
                     <constraint firstAttribute="bottomMargin" secondItem="R2G-43-Ozi" secondAttribute="bottom" constant="16" id="Gyj-to-oDa"/>
                     <constraint firstItem="y2T-7n-gQL" firstAttribute="trailing" secondItem="xOR-Ru-R5X" secondAttribute="trailing" id="M9T-u3-asa"/>
-                    <constraint firstItem="R2G-43-Ozi" firstAttribute="leading" secondItem="CVj-dP-wUx" secondAttribute="leadingMargin" constant="32" id="OCZ-fT-Vj7"/>
+                    <constraint firstItem="R2G-43-Ozi" firstAttribute="leading" secondItem="CVj-dP-wUx" secondAttribute="leadingMargin" constant="16" id="OCZ-fT-Vj7"/>
                     <constraint firstItem="xOR-Ru-R5X" firstAttribute="centerY" secondItem="Za1-Of-fGi" secondAttribute="centerY" constant="-10.5" id="SIX-Jo-FOn"/>
                     <constraint firstItem="xOR-Ru-R5X" firstAttribute="leading" secondItem="Za1-Of-fGi" secondAttribute="trailing" constant="8" id="Wna-vH-Pkf"/>
                     <constraint firstItem="y2T-7n-gQL" firstAttribute="leading" secondItem="xOR-Ru-R5X" secondAttribute="leading" id="ZHY-Ck-IgR"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="R2G-43-Ozi" secondAttribute="trailing" constant="32" id="b9d-PP-dfh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="R2G-43-Ozi" secondAttribute="trailing" constant="16" id="b9d-PP-dfh"/>
                     <constraint firstItem="R2G-43-Ozi" firstAttribute="top" secondItem="Za1-Of-fGi" secondAttribute="bottom" constant="16" id="hX7-HH-6P0"/>
                     <constraint firstItem="Za1-Of-fGi" firstAttribute="top" secondItem="CVj-dP-wUx" secondAttribute="top" constant="16" id="qGb-4P-wRF"/>
                     <constraint firstItem="y2T-7n-gQL" firstAttribute="top" secondItem="xOR-Ru-R5X" secondAttribute="bottom" id="rFX-sO-Oxy"/>

@@ -20,7 +20,7 @@ class PostCommentsPresenter
         _getPostCommentsInteractor = getPostCommentsInteractor
     }
 
-    func refreshComments()
+    @objc func refreshComments()
     {
         view?.showLoading()
         _getPostCommentsInteractor.resume(postId: _post.id) { [weak self] result in
@@ -33,7 +33,15 @@ class PostCommentsPresenter
                 switch result {
                 case .success(let comments):
                     selfBlocked.view?.showComments(comments)
-                case .failure(let err): break
+                case .failure(let err):
+                    switch err {
+                    case .connectionError:
+                        selfBlocked.view?.showNetworkError()
+                    case .decodingError, .serverUnavailable:
+                        selfBlocked.view?.showUnknownError()
+                    case .noInternetConnection, .serverError:
+                        selfBlocked.view?.showNoInternetConnection()
+                    }
                 }
             }
         }

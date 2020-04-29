@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  PostConsumer
+
+  Created by Kelvin Lima on 29/04/20.
+  Copyright © 2020 UnB. All rights reserved.
+*/
+"There's no recent posts to show" = "There's no recent posts to show";
+"Updating your data" = "Updating your data";
+"What people says about" = "What people says about";
+"Recent Posts" = "Recent Posts";
+"Error" = "Error";
+"A Network error occurred, please try again" = "A Network error occurred, please try again";
+"Your internet connection appears to be offline." = "Your internet connection appears to be offline.";
+"An strange error occurred, please try again." = "An strange error occurred, please try again.";
