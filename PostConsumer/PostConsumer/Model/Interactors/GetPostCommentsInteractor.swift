@@ -11,13 +11,13 @@ import Foundation
 class GetPostCommentsInteractor
 {
     private let _postsNetworking: PostsNetworking
-
+    
     init(postsNetworking: PostsNetworking)
     {
         self._postsNetworking = postsNetworking
     }
-
-    func resume(postId: Int, handler: @escaping (Result<[PostCommentsModel], Error>) -> Void)
+    
+    func resume(postId: Int, handler: @escaping (Result<[PostCommentsModel], NetworkErrors>) -> Void)
     {
         QueueUtils.interactorsQueue.async {
             self._postsNetworking.getPostComments(postId: postId) { result in

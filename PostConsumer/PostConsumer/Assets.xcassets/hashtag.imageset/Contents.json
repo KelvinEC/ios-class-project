@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "midia-social-4.png",
+      "filename" : "placa.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "midia-social-5.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "midia-social-6.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

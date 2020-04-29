@@ -38,6 +38,8 @@
 		B6E822BD245A209500A84FA9 /* PostCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822BC245A209500A84FA9 /* PostCommentsDataSource.swift */; };
 		B6E822BF245A21DC00A84FA9 /* PostCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822BE245A21DC00A84FA9 /* PostCommentsPresenter.swift */; };
 		B6E822C1245A222300A84FA9 /* GetPostCommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822C0245A222300A84FA9 /* GetPostCommentsInteractor.swift */; };
+		B6E822C4245A365100A84FA9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6E822C6245A365100A84FA9 /* Localizable.strings */; };
+		B6E822CB245A38DE00A84FA9 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822CA245A38DE00A84FA9 /* ViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,9 @@
 		B6E822BC245A209500A84FA9 /* PostCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsDataSource.swift; sourceTree = "<group>"; };
 		B6E822BE245A21DC00A84FA9 /* PostCommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsPresenter.swift; sourceTree = "<group>"; };
 		B6E822C0245A222300A84FA9 /* GetPostCommentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostCommentsInteractor.swift; sourceTree = "<group>"; };
+		B6E822C5245A365100A84FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6E822C9245A369400A84FA9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B6E822CA245A38DE00A84FA9 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,7 @@
 				B6DF62022459FF2000C80B41 /* Assets.xcassets */,
 				B6DF62042459FF2000C80B41 /* LaunchScreen.storyboard */,
 				B6DF62072459FF2000C80B41 /* Info.plist */,
+				B6E822C6245A365100A84FA9 /* Localizable.strings */,
 			);
 			path = PostConsumer;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				B692D8A1245A07C80091EEE3 /* RecentPosts */,
 				B6DF62132459FFD400C80B41 /* Presenter */,
 				B6DF621F245A016500C80B41 /* Datasources */,
+				B6E822CA245A38DE00A84FA9 /* ViewControllerProtocol.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -328,6 +335,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = B6DF61ED2459FF1B00C80B41;
 			productRefGroup = B6DF61F72459FF1B00C80B41 /* Products */;
@@ -347,6 +355,7 @@
 				B6DF62062459FF2000C80B41 /* LaunchScreen.storyboard in Resources */,
 				B6DF62032459FF2000C80B41 /* Assets.xcassets in Resources */,
 				B641FB2B245A099A0025223F /* RecentPostTableViewCell.xib in Resources */,
+				B6E822C4245A365100A84FA9 /* Localizable.strings in Resources */,
 				B641FB31245A0BDF0025223F /* NoInformationAvailableTableViewCell.xib in Resources */,
 				B6DF62012459FF1B00C80B41 /* Main.storyboard in Resources */,
 				B6E822BB245A1E5300A84FA9 /* PostCommentTableViewCell.xib in Resources */,
@@ -360,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E822CB245A38DE00A84FA9 /* ViewControllerProtocol.swift in Sources */,
 				B6DF62172459FFF100C80B41 /* ViewControllerExtensions.swift in Sources */,
 				B6DF6231245A045300C80B41 /* QueueUtils.swift in Sources */,
 				B6DF6219245A002900C80B41 /* StoryboardedProtocol.swift in Sources */,
@@ -407,6 +417,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		B6E822C6245A365100A84FA9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E822C5245A365100A84FA9 /* en */,
+				B6E822C9245A369400A84FA9 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -414,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -474,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

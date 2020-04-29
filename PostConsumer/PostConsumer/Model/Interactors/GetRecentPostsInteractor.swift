@@ -11,13 +11,13 @@ import Foundation
 class GetRecentPostsInteractor
 {
     private let _postsNetworking: PostsNetworking
-
+    
     init(postsNetworking: PostsNetworking)
     {
         self._postsNetworking = postsNetworking
     }
-
-    func resume(handler: @escaping (Result<[PostModel], Error>) -> Void)
+    
+    func resume(handler: @escaping (Result<[PostModel], NetworkErrors>) -> Void)
     {
         QueueUtils.interactorsQueue.async {
             self._postsNetworking.getRecentPosts { result in

@@ -12,7 +12,7 @@ class NoInformationAvailableTableViewCell: UITableViewCell
 {
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var emptyImageView: UIImageView!
-
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
@@ -20,27 +20,27 @@ class NoInformationAvailableTableViewCell: UITableViewCell
         _setupFonts()
         _setupImages()
     }
-
+    
     private func _setupFonts()
     {
         emptyLabel.font = UIFont.systemFont(ofSize: 15,
                                             weight: .light)
     }
-
+    
     private func _setupTexts()
     {
         emptyLabel.text = NSLocalizedString("There's no recent posts to show", comment: "")
         emptyLabel.textAlignment = .center
         emptyLabel.numberOfLines = 0
     }
-
+    
     private func _setupImages()
     {
         guard let sadImage = UIImage(named: "sad-face") else {
             return
         }
-
+        
         emptyImageView.image = sadImage
     }
-
+    
 }

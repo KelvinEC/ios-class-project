@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol PostCommentsViewProtocol: AnyObject
+protocol PostCommentsViewProtocol: ViewControllerProtocol
 {
     func showTitle(postName: String)
     
     func showComments(_ comments: [PostCommentsModel])
-
+    
     func showLoading()
-
+    
     func hideLoading()
 }
