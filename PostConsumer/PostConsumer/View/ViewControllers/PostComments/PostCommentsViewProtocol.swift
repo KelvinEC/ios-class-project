@@ -1,5 +1,5 @@
 //
-//  RecentPostsViewProtocol.swift
+//  PostCommentsViewProtocol.swift
 //  PostConsumer
 //
 //  Created by Kelvin Lima on 29/04/20.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol RecentPostsViewProtocol: AnyObject
+protocol PostCommentsViewProtocol: AnyObject
 {
-    func showPosts(_ posts: [PostModel])
+    func showTitle(postName: String)
+    
+    func showComments(_ comments: [PostCommentsModel])
 
     func showLoading()
 
     func hideLoading()
-
-    func navigateToPostComments()
 }

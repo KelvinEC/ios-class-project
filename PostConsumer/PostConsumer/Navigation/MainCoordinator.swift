@@ -31,4 +31,17 @@ class MainCoordinator: NSObject, Coordinator
         
         navigationController.pushViewController(vc, animated: false)
     }
+
+    func postComments(post: PostModel)
+    {
+        let getCommentsInteractor = GetPostCommentsInteractor(postsNetworking: PostsNetworking())
+        let presenter = PostCommentsPresenter(post: post, getPostCommentsInteractor: getCommentsInteractor)
+        let vc = PostCommentsViewController.instantiate()
+
+        vc.coordinator = self
+        vc.eventHandler = presenter
+        presenter.view = vc
+
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

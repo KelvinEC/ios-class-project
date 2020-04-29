@@ -38,5 +38,35 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="170.75892857142856"/>
         </scene>
+        <!--Post Comments View Controller-->
+        <scene sceneID="5HN-tL-Sf1">
+            <objects>
+                <viewController storyboardIdentifier="PostCommentsViewController" id="RgA-4F-uEa" customClass="PostCommentsViewController" customModule="PostConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8JB-12-AWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-Yu-peY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7t3-Yu-peY" secondAttribute="bottom" id="GRd-mc-B27"/>
+                            <constraint firstItem="7t3-Yu-peY" firstAttribute="top" secondItem="hDt-zt-6kc" secondAttribute="top" id="UcN-4G-c1c"/>
+                            <constraint firstItem="7t3-Yu-peY" firstAttribute="leading" secondItem="hDt-zt-6kc" secondAttribute="leading" id="Z3x-2H-Fhm"/>
+                            <constraint firstItem="hDt-zt-6kc" firstAttribute="trailing" secondItem="7t3-Yu-peY" secondAttribute="trailing" id="kiS-v9-ouJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hDt-zt-6kc"/>
+                    </view>
+                    <connections>
+                        <outlet property="postCommentTableView" destination="7t3-Yu-peY" id="hhR-7C-R9P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vV-fF-8fF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868.11594202898561" y="170.75892857142856"/>
+        </scene>
     </scenes>
 </document>

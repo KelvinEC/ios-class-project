@@ -31,6 +31,13 @@
 		B6DF6231245A045300C80B41 /* QueueUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF6230245A045300C80B41 /* QueueUtils.swift */; };
 		B6DF6233245A05B800C80B41 /* PresentersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF6232245A05B800C80B41 /* PresentersProtocol.swift */; };
 		B6DF6235245A05F500C80B41 /* RecentPostsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF6234245A05F500C80B41 /* RecentPostsViewPresenter.swift */; };
+		B6E822B4245A1D5000A84FA9 /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822B3245A1D5000A84FA9 /* PostCommentsViewController.swift */; };
+		B6E822B6245A1D6900A84FA9 /* PostCommentsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822B5245A1D6900A84FA9 /* PostCommentsViewProtocol.swift */; };
+		B6E822BA245A1E5300A84FA9 /* PostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822B8245A1E5300A84FA9 /* PostCommentTableViewCell.swift */; };
+		B6E822BB245A1E5300A84FA9 /* PostCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6E822B9245A1E5300A84FA9 /* PostCommentTableViewCell.xib */; };
+		B6E822BD245A209500A84FA9 /* PostCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822BC245A209500A84FA9 /* PostCommentsDataSource.swift */; };
+		B6E822BF245A21DC00A84FA9 /* PostCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822BE245A21DC00A84FA9 /* PostCommentsPresenter.swift */; };
+		B6E822C1245A222300A84FA9 /* GetPostCommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E822C0245A222300A84FA9 /* GetPostCommentsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,13 @@
 		B6DF6230245A045300C80B41 /* QueueUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueUtils.swift; sourceTree = "<group>"; };
 		B6DF6232245A05B800C80B41 /* PresentersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentersProtocol.swift; sourceTree = "<group>"; };
 		B6DF6234245A05F500C80B41 /* RecentPostsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPostsViewPresenter.swift; sourceTree = "<group>"; };
+		B6E822B3245A1D5000A84FA9 /* PostCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
+		B6E822B5245A1D6900A84FA9 /* PostCommentsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewProtocol.swift; sourceTree = "<group>"; };
+		B6E822B8245A1E5300A84FA9 /* PostCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentTableViewCell.swift; sourceTree = "<group>"; };
+		B6E822B9245A1E5300A84FA9 /* PostCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCommentTableViewCell.xib; sourceTree = "<group>"; };
+		B6E822BC245A209500A84FA9 /* PostCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsDataSource.swift; sourceTree = "<group>"; };
+		B6E822BE245A21DC00A84FA9 /* PostCommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsPresenter.swift; sourceTree = "<group>"; };
+		B6E822C0245A222300A84FA9 /* GetPostCommentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostCommentsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +105,13 @@
 			path = NoInformationAvailableCell;
 			sourceTree = "<group>";
 		};
-		B692D8A1245A07C80091EEE3 /* RecentPostsView */ = {
+		B692D8A1245A07C80091EEE3 /* RecentPosts */ = {
 			isa = PBXGroup;
 			children = (
 				B6DF61FD2459FF1B00C80B41 /* RecentPostsViewController.swift */,
 				B692D8A2245A07DD0091EEE3 /* RecentPostsViewProtocol.swift */,
 			);
-			path = RecentPostsView;
+			path = RecentPosts;
 			sourceTree = "<group>";
 		};
 		B6DF61ED2459FF1B00C80B41 = {
@@ -174,7 +188,8 @@
 		B6DF62112459FFCB00C80B41 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B692D8A1245A07C80091EEE3 /* RecentPostsView */,
+				B6E822B2245A1D2B00A84FA9 /* PostComments */,
+				B692D8A1245A07C80091EEE3 /* RecentPosts */,
 				B6DF62132459FFD400C80B41 /* Presenter */,
 				B6DF621F245A016500C80B41 /* Datasources */,
 			);
@@ -194,6 +209,7 @@
 			children = (
 				B6DF6232245A05B800C80B41 /* PresentersProtocol.swift */,
 				B6DF6234245A05F500C80B41 /* RecentPostsViewPresenter.swift */,
+				B6E822BE245A21DC00A84FA9 /* PostCommentsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 		B6DF621C245A011600C80B41 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				B6E822B7245A1E3200A84FA9 /* PostCommentCell */,
 				B641FB2D245A0BBB0025223F /* NoInformationAvailableCell */,
 				B641FB2C245A0BB10025223F /* RecentPostCell */,
 			);
@@ -220,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				B692D8A4245A08800091EEE3 /* RecentPostsDataSource.swift */,
+				B6E822BC245A209500A84FA9 /* PostCommentsDataSource.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -237,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DF622C245A041E00C80B41 /* GetRecentPostsInteractor.swift */,
+				B6E822C0245A222300A84FA9 /* GetPostCommentsInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -247,6 +266,24 @@
 				B6DF6230245A045300C80B41 /* QueueUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6E822B2245A1D2B00A84FA9 /* PostComments */ = {
+			isa = PBXGroup;
+			children = (
+				B6E822B3245A1D5000A84FA9 /* PostCommentsViewController.swift */,
+				B6E822B5245A1D6900A84FA9 /* PostCommentsViewProtocol.swift */,
+			);
+			path = PostComments;
+			sourceTree = "<group>";
+		};
+		B6E822B7245A1E3200A84FA9 /* PostCommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6E822B8245A1E5300A84FA9 /* PostCommentTableViewCell.swift */,
+				B6E822B9245A1E5300A84FA9 /* PostCommentTableViewCell.xib */,
+			);
+			path = PostCommentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +349,7 @@
 				B641FB2B245A099A0025223F /* RecentPostTableViewCell.xib in Resources */,
 				B641FB31245A0BDF0025223F /* NoInformationAvailableTableViewCell.xib in Resources */,
 				B6DF62012459FF1B00C80B41 /* Main.storyboard in Resources */,
+				B6E822BB245A1E5300A84FA9 /* PostCommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,21 +364,27 @@
 				B6DF6231245A045300C80B41 /* QueueUtils.swift in Sources */,
 				B6DF6219245A002900C80B41 /* StoryboardedProtocol.swift in Sources */,
 				B6DF622D245A041E00C80B41 /* GetRecentPostsInteractor.swift in Sources */,
+				B6E822C1245A222300A84FA9 /* GetPostCommentsInteractor.swift in Sources */,
 				B6DF621B245A005E00C80B41 /* CoordinatorProtocol.swift in Sources */,
 				B6DF6224245A01D500C80B41 /* Networking.swift in Sources */,
 				B692D8A5245A08800091EEE3 /* RecentPostsDataSource.swift in Sources */,
 				B6DF6222245A018A00C80B41 /* PostModel.swift in Sources */,
 				B6DF61FE2459FF1B00C80B41 /* RecentPostsViewController.swift in Sources */,
 				B6DF621E245A013B00C80B41 /* RecentPostTableViewCell.swift in Sources */,
+				B6E822B6245A1D6900A84FA9 /* PostCommentsViewProtocol.swift in Sources */,
+				B6E822BA245A1E5300A84FA9 /* PostCommentTableViewCell.swift in Sources */,
 				B6DF6235245A05F500C80B41 /* RecentPostsViewPresenter.swift in Sources */,
 				B6DF6228245A029000C80B41 /* PostCommentsModel.swift in Sources */,
 				B6DF622A245A037000C80B41 /* PostsNetworking.swift in Sources */,
 				B641FB30245A0BDF0025223F /* NoInformationAvailableTableViewCell.swift in Sources */,
 				B6174638245A141E005EB6EA /* MainCoordinator.swift in Sources */,
 				B6DF6226245A021200C80B41 /* ConnectionTest.swift in Sources */,
+				B6E822BF245A21DC00A84FA9 /* PostCommentsPresenter.swift in Sources */,
+				B6E822B4245A1D5000A84FA9 /* PostCommentsViewController.swift in Sources */,
 				B6DF6233245A05B800C80B41 /* PresentersProtocol.swift in Sources */,
 				B6DF61FA2459FF1B00C80B41 /* AppDelegate.swift in Sources */,
 				B692D8A3245A07DD0091EEE3 /* RecentPostsViewProtocol.swift in Sources */,
+				B6E822BD245A209500A84FA9 /* PostCommentsDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

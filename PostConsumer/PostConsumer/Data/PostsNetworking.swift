@@ -35,7 +35,6 @@ class PostsNetworking
     func getPostComments(postId: Int, handler: @escaping (Result<[PostCommentsModel], NetworkErrors>) -> Void)
     {
         let operation = _setupRouteParameter(route: .commentsForPosts, parameter: .postId, value: postId)
-        print("\(operation)")
         guard let request = Networking.shared.createRequest(operation: operation, type: .get, parameters: nil) else {
             return
         }
@@ -46,7 +45,7 @@ class PostsNetworking
     private func _setupRouteParameter(route: Endpoints, parameter: Parameters, value: Int) -> String
     {
         let range = NSRange(location: 0, length: route.rawValue.utf16.count)
-        let regex = try! NSRegularExpression(pattern: "{(.*?)}")
+        let regex = try! NSRegularExpression(pattern: "\\{(.*?)\\}")
 
         return regex.stringByReplacingMatches(in: route.rawValue,
                                               options: [],

@@ -36,12 +36,14 @@ class RecentPostsViewController: UIViewController
 
         recentPostTableView.delegate = _datasource
         recentPostTableView.dataSource = _datasource
+        recentPostTableView.tableFooterView = UIView()
+        _datasource?.delegate = self
     }
 
     private func _setupNavigationBar()
     {
         if #available(iOS 13.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.prefersLargeTitles = false
         }
 
         self.navigationItem.title = NSLocalizedString("Recent Posts", comment: "")
@@ -66,7 +68,16 @@ extension RecentPostsViewController: RecentPostsViewProtocol
     {
     }
 
-    func navigateToPostComments()
+    func navigateToPostComments(post: PostModel)
     {
+        coordinator?.postComments(post: post)
+    }
+}
+
+extension RecentPostsViewController: RecentPostInteraction
+{
+    func tappedOnPost(post: PostModel, index: IndexPath)
+    {
+        eventHandler?.postTapped(post: post)
     }
 }

@@ -26,12 +26,14 @@ class RecentPostsViewPresenter
     // MARK: - Public Methods
     func refreshPosts()
     {
+        view?.showLoading()
         _getRecentPosts.resume { [weak self] result in
             guard let selfBlocked = self else {
                 return
             }
 
             DispatchQueue.main.async {
+                selfBlocked.view?.hideLoading()
                 switch result {
                 case .success(let posts):
                     selfBlocked._recentPosts.append(contentsOf: posts)
@@ -44,7 +46,7 @@ class RecentPostsViewPresenter
 
     func postTapped(post: PostModel)
     {
-        // Load recent posts and show new screen with Comments
+        view?.navigateToPostComments(post: post)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  RecentPostsDataSource.swift
+//  PostCommentsDataSource.swift
 //  PostConsumer
 //
 //  Created by Kelvin Lima on 29/04/20.
@@ -8,54 +8,47 @@
 
 import Foundation
 import UIKit.UITableView
-import UIKit.UITableViewCell
 
-protocol RecentPostInteraction: AnyObject
-{
-    func tappedOnPost(post: PostModel, index: IndexPath)
-}
-
-class RecentPostsDataSource: NSObject
+class PostCommentsDataSource: NSObject
 {
     // MARK: - Private Properties
-    private let recentPostsCell = "RecentPostTableViewCell"
+    private let commentCell = "PostCommentTableViewCell"
     private let emptyCell = "NoInformationAvailableTableViewCell"
-
     // MARK: - Public Properties
-    var posts: [PostModel]
-    weak var delegate: RecentPostInteraction?
+    var comments: [PostCommentsModel]
 
     init(tablewView: UITableView)
     {
-        posts = []
-        tablewView.register(UINib(nibName: recentPostsCell, bundle: Bundle.main),
-                            forCellReuseIdentifier: recentPostsCell)
+        comments = []
+        tablewView.register(UINib(nibName: commentCell, bundle: Bundle.main),
+                            forCellReuseIdentifier: commentCell)
         tablewView.register(UINib(nibName: emptyCell, bundle: Bundle.main),
         forCellReuseIdentifier: emptyCell)
     }
 }
 
-extension RecentPostsDataSource: UITableViewDataSource
+extension PostCommentsDataSource: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return posts.count > 0 ? posts.count : 1
+        return comments.count > 0 ? comments.count : 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        switch posts.count > 0 {
+        switch comments.count > 0 {
         case true:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: recentPostsCell,
-                                                           for: indexPath) as? RecentPostTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: commentCell,
+                                                           for: indexPath) as? PostCommentTableViewCell else {
                 return UITableViewCell()
             }
 
-            let post = posts[indexPath.row]
+            let comment = comments[indexPath.row]
 
-            cell.postTitleLabel.text = post.title
-            cell.postBodyLabel.text = post.body
-
+            cell.nameLabel.text = comment.name
+            cell.emailLabel.text = comment.email
+            cell.commentBodyLabel.text = comment.body
+            
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: emptyCell,
@@ -68,12 +61,11 @@ extension RecentPostsDataSource: UITableViewDataSource
     }
 }
 
-extension RecentPostsDataSource: UITableViewDelegate
+extension PostCommentsDataSource: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        delegate?.tappedOnPost(post: posts[indexPath.row], index: indexPath)
     }
 }
+
